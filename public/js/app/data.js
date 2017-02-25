@@ -50,25 +50,23 @@ var data = (function () {
       console.log(childKey);
     })
 
-   // console.log(a);
+    // console.log(a);
 
     return result;
 
 
-
-
-
   }
 
-  function searchForCredit (size, period, currency) {
-    var database = firebase.database().ref('a');
-    
+  function getBanksInfo() {
+    var database = firebase.database().ref('banks');
+    return database.once('value');
+
   }
 
   return {
     test: test,
     register: register,
-    searchForCredit: searchForCredit
+    getBanksInfo: getBanksInfo
   }
 
 }());

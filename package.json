@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/knmitrofanov/Best-Credit/issues"
   },
-  "homepage": "https://github.com/knmitrofanov/Best-Credit#readme"
+  "homepage": "https://github.com/knmitrofanov/Best-Credit#readme",
+  "dependencies": {
+    "firebase": "^3.6.9",
+    "jquery": "^3.1.1"
+  }
 }

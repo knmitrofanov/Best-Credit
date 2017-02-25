@@ -5,7 +5,8 @@
             this.redirect('#/home');
         });
 
-        this.get('#/home', home.homePage)
+        this.get('#/home', home.searchingForCredit);
+        this.get('#/result', home.searchingForCredit)
 
         this.get('#/test', test.test);
 

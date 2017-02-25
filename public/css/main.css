@@ -15,9 +15,13 @@
     border: 1px solid green;
 }
 
-#info {
+#creditTerm {
     display: inline-block;
     width: 50px;
+}
+
+.red-frame {
+  border: 1px solid red;
 }
 
 /* //////////////////////////////////////////////////////////////////////////*/
