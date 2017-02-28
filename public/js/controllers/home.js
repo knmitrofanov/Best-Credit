@@ -25,13 +25,16 @@ var home = (function () {
             creditTerm,
             currency,
             monthlyAmount,
-            totalAmount;
+            totalAmount,
+            interest,
+            tax;
+
 
         templates.get('home')
             .then(function (template) {
                 context.$element().html(template());
 
-                $('#search-credit').on('click', function () {
+                $('#btn-search-credit').on('click', function () {
 
                     data.getBanksInfo().then(snapshot => {
                         banks = snapshot.val();
@@ -60,17 +63,9 @@ var home = (function () {
                                 creditType = 'housing';
                                 break;
                             default:
+                                creditType
                                 break;
                         }
-
-                        console.log(creditType);
-                        console.log(currency);
-                        for (let key in banks) {
-                            console.log(banks[key][a][creditType][currency.toLowerCase()] * 1000000);
-
-
-                        }
-
 
                         if (creditType === 'Изберете') {
                             toastr.error('Моля въведете желания от Вас вид кредит');
@@ -78,13 +73,38 @@ var home = (function () {
                             return;
                         }
 
+                        context.redirect('#/result')
+
+                        var ne6to = context.path;
+                        console.log(ne6to);
+                        console.log(banks);
+
+                        
+
+                        console.log(creditType);
+                        console.log(currency);
+                        for (let key in banks) {
+                            console.log(banks[key][a][creditType][currency.toLowerCase()]);
+                            interest = amount * (banks[key][a][creditType][currency.toLowerCase()] / 100);
+                            totalAmount = amount * 1 + interest;
+                            monthlyAmount = totalAmount / creditTerm;
+                            // tax = amount *  dopi6i za taksata
+
+                            banks[key]['totalAmount'] = totalAmount;
+                            banks[key]['interest'] = interest;
+                            banks[key]['monthlyAmount'] = monthlyAmount;
+                            console.log(banks[key]);
+
+
+                        }
+
+
                         return templates.get('searching-credit').then(template => {
                             context.$element().html(template(banks));
                         })
                     })
                 })
             });
-
 
     }
 

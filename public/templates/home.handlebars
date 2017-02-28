@@ -1,74 +1,79 @@
 <div class="center-img">
-    <img src="./css/test.jpg" class="img-fluid" alt="fon" id="fon">
+    <img src="../css/Pictures/test.jpg" class="img-fluid" alt="fon" id="fon">
 </div>
 
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#credits" role="tab">Credit</a>  
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#deposits" role="tab">Deposit</a>
-    </li>
-</ul>
+<div class="">
 
-<!-- Tab panes -->
-<div class="tab-content">
-    <div class="tab-pane active" id="credits" role="tabpanel">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#credits" role="tab">Credit</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#deposits" role="tab">Deposit</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="credits" role="tabpanel">
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="credit-type">Вид кредит</label>
-                    <select class="form-control" id="credit-type">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="credit-type">Вид кредит</label>
+                        <select class="form-control" id="credit-type">
                         <option selected>Изберете</option>
                         <option>Потребителски кредити</option>
                         <option>Ипотечен кредит</option>
                         <option>Жилищен кредит</option>
                  </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="credit-amount" class="mr-sm-2">Размер на кредита</label>
-                    <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
-                </div>
-                <div class="col-md-3">
-                    <label for="slider">Период за погасяване (месеци)</label>
-                    <input type="range" min="3" max="36" step="3" value="3" id="slider" oninput="creditTerm.value = slider.value">
-                    <input type="text" class="form-control" id="creditTerm" value="3">
-                </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="credit-amount" class="mr-sm-2">Размер на кредита</label>
+                        <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="slider">Период за погасяване (месеци)</label>
+                        <input type="range" min="12" max="36" step="3" value="12" id="slider" oninput="creditTerm.value = slider.value">
+                        <input type="text" class="form-control" id="creditTerm" value="12">
+                    </div>
 
-                <div class="col-md-2">
-                    <label for="credit-currency">Валута</label>
-                    <select class="form-control" id="credit-currency">
+                    <div class="col-md-2">
+                        <label for="credit-currency">Валута</label>
+                        <select class="form-control" id="credit-currency">
                         <option selected>Изберете</option>
                         <option>BGN</option>
                         <option>EUR</option>
                         <option>USD</option>
                  </select>
-                </div>
+                    </div>
 
-                <div class="col-md-1">
-                    <label for="">dd</label>
-                    <button class="btn btn-success btn-block" id="search-credit">Submit</button>
-                    <a href="#/result" class="btn btn-success" id="search">eto go</a>
+                    <div class="col-md-1">
+                        <label for="">dd</label>
+                        <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
+                        <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
+                    </div>
+
                 </div>
 
             </div>
 
+            <div>
+                dadadas
+            </div>
+
+
+
         </div>
-
-        <div>
-            dadadas
+        <div class="tab-pane" id="deposits" role="tabpanel">
+            <div>
+                dadadas
+            </div>
         </div>
-
-
-
     </div>
-    <div class="tab-pane" id="deposits" role="tabpanel">
-        <div>
-            dadadas
-        </div>
-    </div>
+
+
 </div>

@@ -1,17 +1,15 @@
 <div class="result">
-  
-    <ul>
-        {{#each this}} 
 
-        <li>
-            <div>
-                <p>banka: {{@key}}</p>
-                <p>potrebitelski кредиt лихва: {{credits.consumer.bgn}} </p>
+    <div class="row">
+        {{#each this}}
+        <div class="col-md-4 col-sm-3">
+            <div class="animated zoomIn">
+                <p>Банка: {{@key}}</p>
+                <p>Потребителски кредит лихва: {{credits.consumer.bgn}} </p>
                 <img src="{{img}}" alt="" class="img-fluid">
+                <a href="#/home/{{@key}}">detail info</a>
             </div>
-        </li>
-    
+        </div>
         {{/each}}
-    </ul>
-
+    </div>
 </div>

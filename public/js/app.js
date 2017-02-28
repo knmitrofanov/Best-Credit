@@ -6,7 +6,7 @@
         });
 
         this.get('#/home', home.searchingForCredit);
-        this.get('#/result', home.searchingForCredit)
+        this.get('#/result', searching.searchingForCredit)
 
         this.get('#/test', test.test);
 
