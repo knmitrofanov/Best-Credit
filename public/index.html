@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  
+
 
   <header>
     <nav class="navbar navbar-toggleable-sm navbar-inverse navbar-custom">
@@ -23,17 +23,23 @@
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#/"> <b>BEST</b> credit</a>
+      <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b> credit</a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link nav-link-custom" href="#/home">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#/about">About</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link nav-link-custom" href="#/register">Register</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-custom" href="#/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#/contacts">Contacts</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -46,18 +52,45 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom hidden" href="#/user">User info</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 
 
-  <div id="content" class="container-fluid">
+  <div id="content">
   </div>
 
   <footer>
-    <div>
-      asssa
+    <div class="container-fluid main-footer">
+      <div class="row">
+        <div class="col-4">
+          <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b> credit</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis enim minima temporibus beatae ipsam consequatur
+            solu
+          </p>
+          <p>Phone: <span>+359 888 88 88</span></p>
+          <p>e-mail: <span>best_credit@mail.com</span></p>
+        </div>
+
+        <div class="col-3">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Privacy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-botom">
+      <span>2017 Best Credit</span>
     </div>
   </footer>
 
@@ -91,12 +124,10 @@
   <script src="./bower_components/tether/dist/js/tether.min.js"></script>
   <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
   <!--Controllers-->
   <script src="./js/controllers/test.js"></script>
   <script src="./js/controllers/home.js"></script>
   <script src="./js/controllers/searching.js"></script>
-
 
   <!--Setup-->
   <script src="./js/app/templates.js"></script>

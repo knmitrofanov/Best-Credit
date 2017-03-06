@@ -67,7 +67,7 @@ var home = (function () {
                                 break;
                         }
 
-                        if (creditType === 'Изберете') {
+                        if (creditType === 'Моля изберете') {
                             toastr.error('Моля въведете желания от Вас вид кредит');
                             $('#credit-type').addClass('red-frame');
                             return;
