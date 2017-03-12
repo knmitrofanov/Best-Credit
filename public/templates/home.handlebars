@@ -9,22 +9,26 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item nav-item-search-menu">
-                <a class="nav-link active nav-link-searh-menu" data-toggle="tab" href="#credits" role="tab">Credit</a>
+                <a class="nav-link active nav-link-searh-menu" data-toggle="tab" href="#credits" role="tab">
+                    <i class="fa fa-money fa-lg" aria-hidden="true"></i> Credit</a>
             </li>
             <li class="nav-item nav-item-search-menu">
-                <a class="nav-link nav-link-searh-menu" data-toggle="tab" href="#deposits" role="tab">Deposit</a>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <a class="nav-link nav-link-searh-menu" data-toggle="tab" href="#deposits" role="tab">
+                    <i class="fa fa-line-chart fa-lg" aria-hidden="true"></i> Deposit</a>
             </li>
             <li class="nav-item nav-item-search-menu">
-                <a class="nav-link nav-link-searh-menu" data-toggle="tab" href="#leasing" role="tab">Leasing</a>
+                <a class="nav-link nav-link-searh-menu" data-toggle="tab" href="#leasing" role="tab">
+                    <i class="fa fa-hourglass-end fa-lg" aria-hidden="true"></i> Leasing</a>
             </li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div class="tab-pane active" id="credits" role="tabpanel">
-                <div class="container">
+            <div class="tab-pane fade show active" id="credits" role="tabpanel">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <label for="credit-type">Вид кредит</label>
                             <select class="form-control" id="credit-type">
                                 <option selected>Моля изберете</option>
@@ -33,17 +37,18 @@
                                 <option>Жилищен кредит</option>
                             </select>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <label for="credit-amount" class="mr-sm-2">Размер на кредита</label>
                             <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
                         </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
                             <label for="slider">Период за погасяване (месеци)</label>
-                            <input type="range" min="12" max="36" step="3" value="12" id="slider" oninput="creditTerm.value = slider.value">
-                            <input type="text" class="form-control" id="creditTerm" value="12">
+                            <input type="range" min="12" max="36" step="3" value="12" id="creditSlider" class="slider" oninput="creditTerm.value = creditSlider.value">
+                            <input type="text" class="form-control service-term" id="creditTerm" value="12">
                         </div>
-
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <label for="credit-currency">Валута</label>
                             <select class="form-control" id="credit-currency">
                                   <option selected>Моля изберете</option>
@@ -52,8 +57,7 @@
                                   <option>USD</option>
                            </select>
                         </div>
-
-                        <div class="col-md-1">
+                        <div class="col-md-2">
                             <label for="">dd</label>
                             <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
                             <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
@@ -63,15 +67,85 @@
             </div>
 
 
-            <div class="tab-pane" id="deposits" role="tabpanel">
-                <div>
-                    dadadas
+            <div class="tab-pane fade" id="deposits" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="credit-type">Вид депозит</label>
+                            <select class="form-control" id="credit-type">
+                                <option selected>Моля изберете</option>
+                                <option>Потребителски кредити</option>
+                                <option>Ипотечен кредит</option>
+                                <option>Жилищен кредит</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="credit-amount" class="mr-sm-2">Размер на депозита</label>
+                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="slider">Срок на депозита (месеци)</label>
+                            <input type="range" min="12" max="36" step="3" value="12" id="sliderDeposit" class="slider" oninput="depositTerm.value = sliderDeposit.value">
+                            <input type="text" class="form-control service-term" id="depositTerm" value="12">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="credit-currency">Валута</label>
+                            <select class="form-control" id="credit-currency">
+                                  <option selected>Моля изберете</option>
+                                  <option>BGN</option>
+                                  <option>EUR</option>
+                                  <option>USD</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">dd</label>
+                            <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
+                            <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="tab-pane" id="leasing" role="tabpanel">
-                <div>
-                    lizing
+            <div class="tab-pane fade" id="leasing" role="tabpanel">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="credit-type">Вид депозит</label>
+                            <select class="form-control" id="credit-type">
+                                <option selected>Моля изберете</option>
+                                <option>Потребителски кредити</option>
+                                <option>Ипотечен кредит</option>
+                                <option>Жилищен кредит</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="credit-amount" class="mr-sm-2">Размер на депозита</label>
+                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="slider">Срок на депозита (месеци)</label>
+                            <input type="range" min="12" max="36" step="3" value="12" class="slider" id="leasingSlider" oninput="leasingTerm.value = leasingSlider.value">
+                            <input type="text" class="form-control service-term" id="leasingTerm" value="12">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="credit-currency">Валута</label>
+                            <select class="form-control" id="credit-currency">
+                                  <option selected>Моля изберете</option>
+                                  <option>BGN</option>
+                                  <option>EUR</option>
+                                  <option>USD</option>
+                           </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="">dd</label>
+                            <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
+                            <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

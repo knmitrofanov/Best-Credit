@@ -1,20 +1,21 @@
-var searching = (function () {
+let searching = (function () {
 
 
     function searchingForCredit(context) {
 
-        var banks;
-        
-        $('#search').on('click', function () {
-            data.getBanksInfo().then(function (snapshot) {
-                    banks = snapshot.val()
+        let banks;
 
-                    return templates.get('searching-credit')
-                })
-                .then(function (template) {
-                    context.$element().html(template(banks));
-                });
-        })
+
+        data.getBanksInfo().then(function (snapshot) {
+                banks = snapshot.val()
+
+                return templates.get('searching-credit')
+            })
+            .then(function (template) {
+                context.$element().html(template(banks));
+                $(document).scrollTop(0);
+            });
+
     }
 
 

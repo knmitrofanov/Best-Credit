@@ -1,10 +1,10 @@
-var home = (function () {
+let home = (function () {
 
 
     function homePage(context) {
 
         data.getBanksInfo().then(function (snapshot) {
-            var banks = snapshot.val()
+            var banks = snapshot.val();
             console.log(banks);
             console.log(snapshot.child('societe').val());
 
@@ -19,7 +19,7 @@ var home = (function () {
     }
 
     function searchingForCredit(context) {
-        var banks,
+        let banks,
             creditType,
             amount,
             creditTerm,
@@ -73,13 +73,13 @@ var home = (function () {
                             return;
                         }
 
-                        context.redirect('#/result')
+                        // context.redirect('#/result')
 
                         var ne6to = context.path;
                         console.log(ne6to);
                         console.log(banks);
 
-                        
+
 
                         console.log(creditType);
                         console.log(currency);
@@ -100,7 +100,8 @@ var home = (function () {
 
 
                         return templates.get('searching-credit').then(template => {
-                            context.$element().html(template(banks));
+                            context.$element().html(template(banks))
+                            $(document).scrollTop(0);
                         })
                     })
                 })

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./bower_components/sweetalert/dist/sweetalert.css">
   <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="./bower_components/animate.css/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <!--<script src="./bower_components/jquery/dist/jquery.min.js"></script>-->
@@ -23,23 +24,11 @@
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b> credit</a>
+      <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b>credit</a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link nav-link-custom" href="#/home">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#/register">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#/login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#/contacts">Contacts</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -51,6 +40,18 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#/contacts">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom nav-link-register" href="#/register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#/login">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-custom hidden" href="#/user">User info</a>
@@ -67,22 +68,32 @@
   <footer>
     <div class="container-fluid main-footer">
       <div class="row">
-        <div class="col-4">
-          <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b> credit</a>
+        <div class="col-md-4">
+          <a class="navbar-brand brand-custom" href="#/"> <b>BEST</b>credit</a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis enim minima temporibus beatae ipsam consequatur
             solu
           </p>
-          <p>Phone: <span>+359 888 88 88</span></p>
-          <p>e-mail: <span>best_credit@mail.com</span></p>
+          <p>Phone: <span class="footer-italic">+359 888 88 88</span></p>
+          <p>e-mail: <span class="footer-italic">best_credit@mail.com</span></p>
         </div>
 
-        <div class="col-3">
+        <div class="col-lg-2 col-sm-3">
           <h4>Company</h4>
           <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="">Terms</a></li>
-            <li><a href="">Privacy</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">About</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Contacts</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Terms</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Privacy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-sm-3">
+          <h4>Community</h4>
+          <ul>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">About</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Contacts</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Terms</a></li>
+            <li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">Privacy</a></li>
           </ul>
         </div>
 
@@ -90,7 +101,17 @@
     </div>
 
     <div class="footer-botom">
-      <span>2017 Best Credit</span>
+      <div class="flex">
+        <div class="flex-item1">
+          <span>2017 Best Credit</span>
+        </div>
+        <div class="flex-item">
+          <a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-google-plus fa-lg"></i></a>
+          <a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 
