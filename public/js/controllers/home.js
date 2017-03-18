@@ -48,7 +48,7 @@ let home = (function () {
                         //     console.log(x.hasOwnProperty("credits"));
                         // })
 
-                        var a = "credits";
+                        var service = "credits";
                         var b = "housing";
                         var c = "bgn";
 
@@ -84,15 +84,15 @@ let home = (function () {
                         console.log(creditType);
                         console.log(currency);
                         for (let key in banks) {
-                            console.log(banks[key][a][creditType][currency.toLowerCase()]);
-                            interest = amount * (banks[key][a][creditType][currency.toLowerCase()] / 100);
+                            console.log(banks[key][service][creditType][currency.toLowerCase()]);
+                            interest = amount * (banks[key][service][creditType][currency.toLowerCase()] / 100);
                             totalAmount = amount * 1 + interest;
                             monthlyAmount = totalAmount / creditTerm;
                             // tax = amount *  dopi6i za taksata
 
-                            banks[key]['totalAmount'] = totalAmount;
+                            banks[key]['totalAmount'] = totalAmount.toFixed(2);
                             banks[key]['interest'] = interest;
-                            banks[key]['monthlyAmount'] = monthlyAmount;
+                            banks[key]['monthlyAmount'] = monthlyAmount.toFixed(2);
                             console.log(banks[key]);
 
 
@@ -106,7 +106,6 @@ let home = (function () {
                     })
                 })
             });
-
     }
 
 

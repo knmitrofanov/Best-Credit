@@ -6,7 +6,8 @@
         });
 
         this.get('#/home', home.searchingForCredit);
-        this.get('#/result', searching.searchingForCredit)
+        this.get('#/result', searching.searchingForCredit);
+        this.get('#/contacts', contacts.showInfo);
 
         this.get('#/test', test.test);
 

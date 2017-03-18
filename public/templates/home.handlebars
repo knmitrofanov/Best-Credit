@@ -44,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="slider">Период за погасяване (месеци)</label>
+                            <label for="creditSlider">Период за погасяване (месеци)</label>
                             <input type="range" min="12" max="36" step="3" value="12" id="creditSlider" class="slider" oninput="creditTerm.value = creditSlider.value">
                             <input type="text" class="form-control service-term" id="creditTerm" value="12">
                         </div>
@@ -71,8 +71,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="credit-type">Вид депозит</label>
-                            <select class="form-control" id="credit-type">
+                            <label for="deposit-type">Вид депозит</label>
+                            <select class="form-control" id="deposit-type">
                                 <option selected>Моля изберете</option>
                                 <option>Потребителски кредити</option>
                                 <option>Ипотечен кредит</option>
@@ -80,19 +80,19 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <label for="credit-amount" class="mr-sm-2">Размер на депозита</label>
-                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
+                            <label for="deposit-amount" class="mr-sm-2">Размер на депозита</label>
+                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="deposit-amount">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="slider">Срок на депозита (месеци)</label>
+                            <label for="sliderDeposit">Срок на депозита (месеци)</label>
                             <input type="range" min="12" max="36" step="3" value="12" id="sliderDeposit" class="slider" oninput="depositTerm.value = sliderDeposit.value">
                             <input type="text" class="form-control service-term" id="depositTerm" value="12">
                         </div>
                         <div class="col-md-4">
-                            <label for="credit-currency">Валута</label>
-                            <select class="form-control" id="credit-currency">
+                            <label for="deposit-currency">Валута</label>
+                            <select class="form-control" id="deposit-currency">
                                   <option selected>Моля изберете</option>
                                   <option>BGN</option>
                                   <option>EUR</option>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="col-md-2">
                             <label for="">dd</label>
-                            <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
+                            <button class="btn btn-success btn-block" id="btn-search-deposit">Submit</button>
                             <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="credit-type">Вид депозит</label>
-                            <select class="form-control" id="credit-type">
+                            <label for="leasing-type">Вид лизинг</label>
+                            <select class="form-control" id="leasing-type">
                                 <option selected>Моля изберете</option>
                                 <option>Потребителски кредити</option>
                                 <option>Ипотечен кредит</option>
@@ -121,19 +121,19 @@
                             </select>
                         </div>
                         <div class="col-md-4">
-                            <label for="credit-amount" class="mr-sm-2">Размер на депозита</label>
-                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="credit-amount">
+                            <label for="leasing-amount" class="mr-sm-2">Размер на депозита</label>
+                            <input class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" id="leasing-amount">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="slider">Срок на депозита (месеци)</label>
+                            <label for="leasingSlider">Срок на депозита (месеци)</label>
                             <input type="range" min="12" max="36" step="3" value="12" class="slider" id="leasingSlider" oninput="leasingTerm.value = leasingSlider.value">
                             <input type="text" class="form-control service-term" id="leasingTerm" value="12">
                         </div>
                         <div class="col-md-4">
-                            <label for="credit-currency">Валута</label>
-                            <select class="form-control" id="credit-currency">
+                            <label for="leasing-currency">Валута</label>
+                            <select class="form-control" id="leasing-currency">
                                   <option selected>Моля изберете</option>
                                   <option>BGN</option>
                                   <option>EUR</option>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="col-md-2">
                             <label for="">dd</label>
-                            <button class="btn btn-success btn-block" id="btn-search-credit">Submit</button>
+                            <button class="btn btn-success btn-block" id="btn-search-leasing">Submit</button>
                             <a href="#/result" class="btn btn-success btn-block" id="search">eto go</a>
                         </div>
                     </div>
