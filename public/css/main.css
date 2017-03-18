@@ -278,7 +278,14 @@ footer a:hover:after {
 /*Contacts =============================================================== Contacts*/
 
 .contacts-container {
-  margin: 30px 8% 0;
+  margin: 40px 8% 100px;
+  color: #7f8c8c;
+}
+
+@media (max-width: 767px) {
+  .contacts-container {
+    margin: 40px 5% 100px;
+  }
 }
 
 iframe {
@@ -286,21 +293,71 @@ iframe {
 }
 
 .contacts-info {
-  background-color: #F3F3F3;
+  background-color: #e5e6e6;
   padding: 20px 15px;
-  margin-top: 40px;
+  margin: 60px 0;
   border-radius: 5px;
+}
+
+.contacts-form p {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .contacts-input {
   display: inline-block;
-  background-color: #F3F3F3;
-  width: 400px;
+  background-color: #e5e6e6;
+  width: 55%;
+  margin-right: 25px;
+}
+
+@media (max-width: 767px) {
+  .contacts-input {
+    width: 100%;
+    display: block;
+    height: 50px;
+  }
 }
 
 .contacts-textarea {
-  background-color: #F3F3F3;
-  width: 600px;
+  background-color: #e5e6e6;
+  width: 85%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .contacts-textarea {
+    width: 100%;
+  }
+}
+
+.contacts-form .btn {
+  width: 150px;
+  height: 40px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .contacts-form .btn {
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.address h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.address a {
+  color: #E2534B;
+  text-decoration: underline;
+}
+
+.fa-map-marker {
+  color: #E2534B;
 }
 
 /*footer ================================================================= footer*/
@@ -389,7 +446,6 @@ h4 {
   width: 100%;
   height: 7px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 0px 0px 8px #FF24B6;
   background: #1CD88D;
   border-radius: 20px;
@@ -416,7 +472,6 @@ h4 {
   width: 100%;
   height: 7px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 0px 0px 8px #FF24B6;
   background: #1CD88D;
   border-radius: 20px;
@@ -437,7 +492,6 @@ h4 {
   width: 100%;
   height: 7px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;
@@ -480,8 +534,8 @@ h4 {
 
 .progres {
   position: relative;
-  height: 50px;
-  background-color: #F3F3F3;
+  height: 60px;
+  background-color: #ececec;
 }
 
 .progres:after,
@@ -498,7 +552,7 @@ h4 {
 
 .progres:after {
   border-color: rgba(241, 241, 241, 0);
-  border-top-color: #f1f1f1;
+  border-top-color: #ececec;
   border-width: 12px;
   margin-left: -20px;
 }
