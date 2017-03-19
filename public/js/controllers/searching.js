@@ -7,7 +7,7 @@ let searching = (function () {
 
 
         data.getBanksInfo().then(function (snapshot) {
-                banks = snapshot.val()
+                banks = snapshot.val();
 
                 return templates.get('searching-credit')
             })

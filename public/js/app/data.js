@@ -11,6 +11,22 @@ var data = (function () {
     });
   }
 
+  function login(user) {
+
+    let error = validator.validateUrl(user.email);
+
+    if (error) {
+      return Promise.reject(error);
+    }
+
+    return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
+  }
+
+  function hasUser(user) {
+
+    return firebase.auth().onAuthStateChanged(user);
+  }
+
   function test() {
 
     firebase.auth().signInWithEmailAndPassword("rodmi@abv.bg", '123456')
@@ -66,7 +82,12 @@ var data = (function () {
   return {
     test: test,
     register: register,
-    getBanksInfo: getBanksInfo
+    getBanksInfo: getBanksInfo,
+    users: {
+      login: login,
+      hasUser: hasUser
+    }
+
   }
 
 }());

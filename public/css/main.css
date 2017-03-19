@@ -73,10 +73,11 @@ footer a:hover:after {
   color: white !important;
   text-transform: uppercase;
   border-bottom: 3px solid #76c7c0;
+  display: inline-block;
 }
 
-.nav-link-register {
-  margin-left: 100px;
+.auth-container {
+  margin-left: 200px;
 }
 
 .nav-link-custom:focus {
@@ -100,6 +101,35 @@ footer a:hover:after {
   .collapse {
     padding-left: 0px;
   }
+}
+
+.nav-item-user {
+  margin-left: 200px;
+}
+
+.nav-item-user img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+/*Login=================================================================login*/
+
+.modal-login {
+  top: 80px;
+}
+
+.modal-header {
+  color: white;
+  background-color: #76c7c0;
+}
+
+.modal-input {
+  background-color: #d6d6c2;
+  border-radius: 0px;
+  height: 45px;
+  margin-top: 20px;
 }
 
 
@@ -315,7 +345,6 @@ iframe {
 @media (max-width: 767px) {
   .contacts-input {
     width: 100%;
-    display: block;
     height: 50px;
   }
 }
@@ -359,6 +388,7 @@ iframe {
 .fa-map-marker {
   color: #E2534B;
 }
+
 
 /*footer ================================================================= footer*/
 

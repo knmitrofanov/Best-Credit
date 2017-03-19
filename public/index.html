@@ -48,19 +48,47 @@
           <li class="nav-item">
             <a class="nav-link nav-link-custom" href="#/contacts">Contacts</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item auth-container">
             <a class="nav-link nav-link-custom nav-link-register" href="#/register">Register</a>
+            <a class="nav-link nav-link-custom nav-link-login" href="#">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#/login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom hidden" href="#/user">User info</a>
+          <li class="nav-item nav-item-user">
+            <a class="nav-link nav-link-custom" id="user-info" href="#/user">User info</a>
+            <img id="user-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Captain_Jack_Sparrow_(5764018454).jpg" alt="user">
+            <button type="button" class="btn btn-result-search" id="btn-logout">Logout</button>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+
+
+  <div class="modal fade modal-login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control modal-input" id="login-email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control modal-input" id="login-password" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" id="btn-login">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <div id="content">
@@ -151,10 +179,12 @@
   <script src="./js/controllers/home.js"></script>
   <script src="./js/controllers/searching.js"></script>
   <script src="./js/controllers/contacts.js"></script>
+  <script src="./js/controllers/user.js"></script>
 
   <!--Setup-->
   <script src="./js/app/templates.js"></script>
   <script src="./js/app/data.js"></script>
+  <script src="./js/app/validator.js"></script>
   <script src="./js/app.js"></script>
 
 
