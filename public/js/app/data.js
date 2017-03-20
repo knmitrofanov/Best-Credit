@@ -18,12 +18,10 @@ var data = (function () {
     if (error) {
       return Promise.reject(error);
     }
-
     return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
   }
 
   function hasUser(user) {
-
     return firebase.auth().onAuthStateChanged(user);
   }
 

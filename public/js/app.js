@@ -16,8 +16,8 @@
 
     $(function () {
         sammyApp.run('#/');
-
-        toastr.options.timeOut = 300;
+        toastr.options.positionClass = "toast-top-center";
+        toastr.options.timeOut = 2000;
         
         data.users.hasUser(function (user) {
             if (user) {
@@ -35,6 +35,10 @@
         $(".nav-link-login").on("click", function () {
             $('#loginModal').modal('show');
         });
+
+        $(".modal-register-link").on("click", function () {
+            $('#loginModal').modal('hide');
+        })
 
         $("#btn-login").on("click", function () {
             let user = {
@@ -68,9 +72,6 @@
                     }
                     console.log(error);
                 });
-
-
-
         });
 
         $('#btn-logout').on("click", function () {

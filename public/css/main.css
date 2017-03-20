@@ -1,4 +1,3 @@
-
 /*index html ----------------------------------------*/
 
 body {
@@ -31,7 +30,11 @@ footer a:after {
 
 footer a:hover:after {
   width: 100%;
-  background: white;
+  background: #d6d6c2;
+}
+
+footer a:hover {
+  color: #d6d6c2 !important;
 }
 
 
@@ -69,6 +72,10 @@ footer a:hover:after {
   font-size: 30px;
 }
 
+.nav-item-custom {
+  margin-right: 10px;
+}
+
 .nav-link-custom {
   color: white !important;
   text-transform: uppercase;
@@ -76,8 +83,15 @@ footer a:hover:after {
   display: inline-block;
 }
 
+@media (max-width: 767px) {
+  .nav-link-custom {
+    display: block;
+  }
+}
+
 .auth-container {
-  margin-left: 200px;
+  margin-left: 350px;
+  transition: all 1s ease;
 }
 
 .nav-link-custom:focus {
@@ -104,13 +118,46 @@ footer a:hover:after {
 }
 
 .nav-item-user {
-  margin-left: 200px;
+  margin-left: 250px;
+  transition: all 1s ease;
 }
 
-.nav-item-user img {
-  width: 50px;
-  height: auto;
-  border-radius: 50%;
+@media (max-width: 1200px) {
+  .nav-item-user,
+  .auth-container {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-item-user,
+  .auth-container {
+    margin-left: 0px;
+  }
+}
+
+.user-logo {
+  color: white;
+}
+
+#user-info {
+  padding-left: 0px;
+}
+
+@media (max-width: 767px) {
+  #user-info {
+    display: inline-block;
+  }
+}
+
+#btn-logout {
+  border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+  #btn-logout {
+    display: block;
+  }
 }
 
 
@@ -120,16 +167,69 @@ footer a:hover:after {
   top: 80px;
 }
 
-.modal-header {
+.modal-login .modal-header {
   color: white;
-  background-color: #76c7c0;
+  background-color: #02a299;
+}
+
+.modal-login .modal-title {
+  letter-spacing: 5px;
+}
+
+.modal-login .modal-body {
+  padding-bottom: 5px;
+}
+
+.modal-input-group {
+  height: 45px;
+  margin-top: 20px;
+  border-bottom: 2px solid #02a299;
+  border-radius: 15px;
+  padding-left: 8px;
+}
+
+.modal-input-group .input-group-addon {
+  border: 0px;
+  background: transparent;
 }
 
 .modal-input {
-  background-color: #d6d6c2;
-  border-radius: 0px;
-  height: 45px;
-  margin-top: 20px;
+  border: 0px;
+  background: transparent;
+}
+
+.modal-login .modal-footer {
+  text-align: center;
+  justify-content: center;
+}
+
+.modal-login .btn {
+  background: #02a299;
+  color: white;
+  border-radius: 20px;
+  width: 55%;
+}
+
+.modal-register-link {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.modal-register-link a {
+  color: lightslategrey;
+  transition: all 0.7s;
+}
+
+.modal-register-link a:hover {
+  color: darkslategrey;;
+  text-decoration: none;
+}
+
+
+/*Register=============================================================== Register*/
+
+.register-form {
+  margin: 45px 10% 0;
 }
 
 
@@ -284,7 +384,7 @@ footer a:hover:after {
 .service-info li {
   padding: 10px 15px;
   border-bottom: 1px solid #d8d8d8;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   color: rgb(99, 99, 99);
 }
