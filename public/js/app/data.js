@@ -1,13 +1,25 @@
 var data = (function () {
 
   function register(user) {
-    firebase.auth().createUserWithEmailAndPassword(user.email, user.password).catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      // ...
+    return firebase.auth().createUserWithEmailAndPassword(user.email, user.password);
+
+    // .catch(function (error) {
+    //   // Handle Errors here.
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   console.log(errorCode);
+    //   console.log(errorMessage);
+    // });
+  }
+
+  function writeUserData(userData, userId) {
+    firebase.database().ref('users/' + userId).set({
+      name: userData.name,
+      lastName: userData.lastName,
+      ucn: userData.ucn,
+      phone: userData.phone,
+      city: userData.city,
+      address: userData.address
     });
   }
 
@@ -83,7 +95,8 @@ var data = (function () {
     getBanksInfo: getBanksInfo,
     users: {
       login: login,
-      hasUser: hasUser
+      hasUser: hasUser,
+      writeUserData: writeUserData
     }
 
   }

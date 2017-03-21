@@ -9,6 +9,7 @@
         this.get('#/result', searching.searchingForCredit);
         this.get('#/contacts', contacts.showInfo);
         this.get('#/register', user.register);
+        this.get('#/user', user.userInfo);  // opraviiii go da e kakto trqbva sus :id !!!!!
 
         this.get('#/test', test.test);
 
