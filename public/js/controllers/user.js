@@ -13,22 +13,7 @@ var user = (function () {
                         password: $("#register-password").val()
                     };
 
-                    data.register(user)
-                        .then(function () {
-                            toastr.success('User registered!');
-                            setTimeout(function () {
-                                context.redirect('#/');
-                                document.location.reload(true);
-                            }, 500);
-                        })
-                        .catch(function (error) {
-                            let errorMessage = error.message;
-                            toastr.error(errorMessage);
-
-                            console.log(error);
-                        });
-
-                    var userData = {
+                    let userData = {
                         name: $("#register-name").val(),
                         lastName: $("#register-last-name").val(),
                         ucn: $("#register-ucn").val(),
@@ -37,32 +22,73 @@ var user = (function () {
                         address: $("#register-address").val()
                     }
 
-                    data.users.hasUser(function (user) {
-                        if (user) {
-                            data.users.writeUserData(userData, user.uid);
-                        } else {
-                            toastr.error("Registration failed!");
-                        }
-                    });
+                    data.register(user)
+                        .then(function () {
+                            data.users.hasUser(function (user) {
+                                if (user) {
+                                    data.users.writeUserData(userData, user.uid);
+                                } else {
+                                    toastr.error("Registration failed!");
+                                }
+                            });
+                        })
+                        .then(function () {
+                            toastr.success('User registered!');
+                            setTimeout(function () {
+                                context.redirect('#/');
+                                document.location.reload(true);
+                            }, 1500);
+                        })
+                        .catch(function (error) {
+                            let errorMessage = error.message;
+                            toastr.error(errorMessage);
+                        });
                 });
             });
     }
 
     function userInfo(context) {
 
-        var userId = firebase.auth().currentUser.uid;
-        
-        firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
-            userData = snapshot.val();
+        data.users.hasUser(user => {
+            if (user) {
+                firebase.database().ref('/users/' + user.uid).once('value').then(function (snapshot) {
+                    userData = snapshot.val();
 
-            templates.get('user-info')
-                .then(function (template) {
-                    context.$element().html(template(userData));
+                    var userEmail = firebase.auth().currentUser;
+
+                    console.log(userEmail);
+
+                    userData["email"] = userEmail;
+                    console.log(userData);
+
+                    templates.get('user-profile')
+                        .then(function (template) {
+                            context.$element().html(template(userData));
+
+                            $("#btn-submit-profile-change").hide();
+
+                            $("#btn-profile-change").on("click", function () {
+
+                                $("#btn-submit-profile-change").show();
+                                $("#btn-profile-change").hide();
+
+                                $(".user-info").css({
+                                    "pointer-events": "all",
+                                    "background-color": "white"
+                                });
+
+                                $(".profile-label").css("background-color", "white");
+                            });
+
+                            $("#btn-submit-profile-change").on("click", function () {
+                                // dobavi update na informaciqta
+                            });
+                        });
                 });
-
-        })
-
-
+            } else {
+                console.log("Failed to get user data!");
+            }
+        });
 
     }
     return {

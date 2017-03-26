@@ -10,6 +10,7 @@
         this.get('#/contacts', contacts.showInfo);
         this.get('#/register', user.register);
         this.get('#/user', user.userInfo);  // opraviiii go da e kakto trqbva sus :id !!!!!
+        this.get("#/bank-details", bank.getBankDetails);
 
         this.get('#/test', test.test);
 
@@ -18,12 +19,13 @@
     $(function () {
         sammyApp.run('#/');
         toastr.options.positionClass = "toast-top-center";
-        toastr.options.timeOut = 2000;
+        toastr.options.timeOut = 3000;
         
         data.users.hasUser(function (user) {
             if (user) {
                 $(".auth-container").hide();
-                $("#user-info").html(`<span>${user.email}</span>`)
+                $("#user-info").html(`<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                ${user.email}`);
 
                 console.log("ima user");
                 console.log(user.email);
@@ -39,7 +41,13 @@
 
         $(".modal-register-link").on("click", function () {
             $('#loginModal').modal('hide');
-        })
+        });
+
+        $(".navbar").on("click", ".nav-link", function (event) {
+            $(".nav-link-active").removeClass("nav-link-active");
+
+            $(event.target).addClass("nav-link-active");
+        });
 
         $("#btn-login").on("click", function () {
             let user = {

@@ -1,14 +1,19 @@
-var contacts = (function () {
+let bank = (function () {
 
 
-    function showInfo(context) {
+    function getBankDetails(context) {
 
-        return templates.get('contacts')
+
+
+        templates.get('bank-details')
             .then(function (template) {
                 context.$element().html(template());
+
             });
     }
+
+
     return {
-        showInfo
+        getBankDetails
     };
 }());

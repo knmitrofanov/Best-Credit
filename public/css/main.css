@@ -5,7 +5,7 @@ body {
   /*font-family: 'Roboto Condensed', sans-serif;*/
 }
 
-a {
+a, button, select {
   cursor: pointer;
 }
 
@@ -46,19 +46,23 @@ footer a:hover {
   background-repeat: no-repeat;
   background-position: bottom;
   font-family: "Open Sans";
-  padding-left: 8%;
+  padding-left: 10%;
   transition: padding-left 1s ease;
+}
+
+.navbar-custom i {
+  pointer-events: none;
 }
 
 @media (max-width: 848px) {
   .navbar-custom {
-    padding-left: 3%;
+    padding-left: 5%;
   }
 }
 
 @media (max-width: 767px) {
   .navbar-custom {
-    padding-left: 5px;
+    padding-left: 10px;
   }
 }
 
@@ -79,7 +83,6 @@ footer a:hover {
 .nav-link-custom {
   color: white !important;
   text-transform: uppercase;
-  border-bottom: 3px solid #76c7c0;
   display: inline-block;
 }
 
@@ -94,10 +97,16 @@ footer a:hover {
   transition: all 1s ease;
 }
 
-.nav-link-custom:focus {
+.nav-link-active {
   background-color: #65a4a3;
   border-bottom: 3px solid #4b8d8a;
   border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    padding-left: 5px !important;
+  }
 }
 
 .collapse {
@@ -107,7 +116,7 @@ footer a:hover {
 
 @media (max-width: 848px) {
   .collapse {
-    padding-left: 3%;
+    padding-left: 5%;
   }
 }
 
@@ -136,27 +145,14 @@ footer a:hover {
   }
 }
 
-.user-logo {
-  color: white;
-}
-
-#user-info {
-  padding-left: 0px;
-}
-
-@media (max-width: 767px) {
-  #user-info {
-    display: inline-block;
-  }
-}
-
 #btn-logout {
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
 @media (max-width: 767px) {
   #btn-logout {
-    display: block;
+    margin-top: 10px;
   }
 }
 
@@ -196,6 +192,11 @@ footer a:hover {
 .modal-input {
   border: 0px;
   background: transparent;
+  padding: 0px;
+}
+
+.modal-input:focus {
+  border-radius: 15px;
 }
 
 .modal-login .modal-footer {
@@ -268,6 +269,10 @@ footer a:hover {
   text-align: center;
 }
 
+.check-indicator {
+  border: 2px solid #02a299;
+}
+
 .btn-register {
   border-radius: 20px;
   background: #02a299;
@@ -323,6 +328,13 @@ footer a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .home-background {
+    content: url("../css/Pictures/Quotefancy-69634-3840x2160.jpg");
+    width: 100%;
+  }
+}
+
 .nav-item-search-menu {
   width: 34%;
   text-align: center;
@@ -335,13 +347,19 @@ footer a:hover {
   border-bottom-color: transparent !important;
 }
 
+@media (max-width: 430px) {
+  .nav-link-searh-menu .fa {
+    display: block;
+  }
+}
+
 .searching-menu .active {
   background-color: #76c7c0 !important;
 }
 
 .searching-menu .tab-content .container-fluid {
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
   transition: padding-left .7s ease, padding-right .7s ease;
 }
 
@@ -360,7 +378,7 @@ footer a:hover {
 }
 
 .searching-menu .form-control {
-  border-radius: 0px;
+  /*border-radius: 0px;*/
   height: 40px !important;
 }
 
@@ -555,6 +573,111 @@ iframe {
 
 .fa-map-marker {
   color: #E2534B;
+}
+
+
+/*User Profile ============================================================== User Profile*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.user-profile-page {
+  background-color: #e5e6e6;
+  color: white;
+  margin: 55px 0;
+  width: 55%;
+  border-radius: 5px;
+  transition: all 0.7s ease;
+}
+
+@media (max-width: 1200px) {
+  .user-profile-page {
+    width: 75%;
+  }
+}
+
+@media (max-width: 948px) {
+  .user-profile-page {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .user-profile-page {
+    width: 100%;
+    margin: 45px 0px;
+  }
+}
+
+.profile-title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-title {
+  background-color: #62A29E;
+  letter-spacing: 5px;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  top: -30px;
+}
+
+.user-profile-page .col-lg-6 {
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(99, 99, 99);
+}
+
+.user-profile-page .col-lg-6 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.profile-label {
+  border: none;
+  background: #d8d8d8;
+  color: darkred;
+  transition: 0.8s ease;
+}
+
+.user-info {
+  border: none;
+  background-color: #d8d8d8;
+  pointer-events: none;
+  transition: all 0.8s ease;
+  height: 45px;
+}
+
+.btn-profile-container {
+  text-align: center;
+}
+
+.btn-profile {
+  background-color: #62A29E;
+  position: relative;
+  bottom: -20px;
+  width: 50%;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: normal;
+  transition: all 0.5s ease;
+  color: white;
+  border-bottom: 3px solid #4b8d8a;
+}
+
+.btn-profile:hover {
+  transform: scale(1.1);
+  background-color: #E2534B;
+  border-color: #C03C35;
 }
 
 
