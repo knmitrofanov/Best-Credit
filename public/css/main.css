@@ -598,7 +598,11 @@ footer a:hover {
 
 /*Banks Info ============================================================= Banks Info */
 
-
+.bank-info-container {
+  width: 50%;
+  margin: 25px 25%;
+  text-align: center;
+}
 
 
 /*Contacts =============================================================== Contacts*/
@@ -851,11 +855,38 @@ footer {
   width: 80%;
 }
 
-h4 {
+.main-footer h4 {
   color: #3b6360;
   border-width: 2px;
   margin-top: 10px;
   font-size: 20px;
+}
+
+.rectangular {
+  background-color: #4b8d8a;
+  display: inline-block;
+  background-image: url("./Pictures/rectan.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.footer-blog {
+  display: inline-block;
+}
+
+.blog {
+  margin-top: 10px;
+}
+
+.blog .row {
+  margin-top: 20px;
+}
+
+.blog-grey {
+  color: #4b8d8a;
 }
 
 

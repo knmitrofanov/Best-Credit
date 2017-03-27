@@ -1,7 +1,19 @@
-<div class="wrapper">
-    <div class="bank-info-container">
-        pedal
-        
+<div class="bank-info-container">
+
+    <div class="bank-img-container">
+        <img src="{{img}}" alt="Bank logo" class="img-fluid bank-img">
     </div>
-    
+
+    <ul class="service-info">
+        <li>Bank: {{@key}}</li>
+        <li>Consumer credit</li>
+        <li>Period: </li>
+        <li>apr: </li>
+        <li>Interest: {{credits.consumer.bgn}} </li>
+        <li>Monthly amount: {{monthlyAmount}}</li>
+        <li>granting fee: {{grantingFee}}</li>
+        <li>maintance fee: {{maintanceFee}}</li>
+    </ul>
+
+
 </div>

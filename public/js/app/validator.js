@@ -1,4 +1,4 @@
-var validator = (function() {
+var validator = (function () {
 
   function validateString(str, min, max, chars) {
     if (typeof str !== 'string' || str.length < min || str.length > max) {
@@ -8,7 +8,7 @@ var validator = (function() {
     }
     if (chars) {
       str = str.split('');
-      if (str.some(function(char) {
+      if (str.some(function (char) {
           return chars.indexOf(char) < 0;
         })) {
         return {
@@ -31,8 +31,19 @@ var validator = (function() {
     }
   }
 
+  function validateEmptyData(data) {
+    if (data.array.forEach(function(element) {
+      element.length === 0
+    }, this)) {
+      return {
+        message: "All field are required"
+      };
+    }
+  }
+
   return {
-    validateString: validateString,
-    validateUrl: validateUrl
+    validateString,
+    validateUrl,
+    validateEmptyData
   };
 }());

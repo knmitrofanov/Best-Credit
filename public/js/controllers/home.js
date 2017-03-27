@@ -48,7 +48,7 @@ let home = (function () {
                         //     console.log(x.hasOwnProperty("credits"));
                         // })
 
-                        var service = "credits";
+                        const service = "credits";
                         var b = "housing";
                         var c = "bgn";
 
