@@ -1,11 +1,14 @@
 /*index html ----------------------------------------*/
 
 body {
-  font-family: "Open Sans"; /* smenigo sys font-family: "Myriad Pro"; */
+  font-family: "Open Sans";
+  /* smenigo sys font-family: "Myriad Pro"; */
   /*font-family: 'Roboto Condensed', sans-serif;*/
 }
 
-a, button, select {
+a,
+button,
+select {
   cursor: pointer;
 }
 
@@ -492,20 +495,22 @@ footer a:hover {
   background: #E2534B;
 }
 
+
 /* Promotion ============================================================= Promotion*/
 
-.promotion-wrapper, section {
+.promotion-wrapper,
+section {
   background-color: #ececec;
   padding-bottom: 45px;
 }
 
 .promotion {
- background-color: #f8f8f8;
- border-radius: 5px;
- text-align: center;
- margin: 25px 10px;
- border-bottom: 3px solid #e5e6e6;
- transition: all 0.5s ease;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-align: center;
+  margin: 25px 10px;
+  border-bottom: 3px solid #e5e6e6;
+  transition: all 0.5s ease;
 }
 
 .promotion:hover {
@@ -536,6 +541,7 @@ footer a:hover {
   background-color: #e8645a;
   border-color: #e2534b;
 }
+
 
 /* Banks promotion ======================================================= Bankk promotion*/
 
@@ -596,12 +602,41 @@ footer a:hover {
   padding: 0 5px;
 }
 
+
 /*Banks Info ============================================================= Banks Info */
 
 .bank-info-container {
-  width: 50%;
+  width: 30%;
   margin: 25px 25%;
   text-align: center;
+  border: 1px solid #d6d6c2;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.bank-info-container ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.bank-info-title {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  background-color: white;
+  padding: 0 10px;
+  max-height: 50px;
+}
+
+.bank-info-item {
+  border-bottom: 1px solid #02a299;
+  width: 60%;
+  margin: 25px 20%;
+}
+
+.bank-info-service {
+  font-size: 20px;
+  color: #02a299;
 }
 
 

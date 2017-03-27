@@ -1,19 +1,13 @@
 <div class="bank-info-container">
-
-    <div class="bank-img-container">
-        <img src="{{img}}" alt="Bank logo" class="img-fluid bank-img">
-    </div>
-
-    <ul class="service-info">
-        <li>Bank: {{@key}}</li>
-        <li>Consumer credit</li>
-        <li>Period: </li>
-        <li>apr: </li>
-        <li>Interest: {{credits.consumer.bgn}} </li>
-        <li>Monthly amount: {{monthlyAmount}}</li>
-        <li>granting fee: {{grantingFee}}</li>
-        <li>maintance fee: {{maintanceFee}}</li>
+    <ul>
+        <img src="../css/Pictures/slider1.jpg" alt="" class="bank-info-title">
+        <li class="bank-info-item"><span class="bank-info-service">Consumer credit:</span> 1523</li>
+        <li class="bank-info-item"><span class="bank-info-service">Period:</span> 36 mounts</li>
+        <li class="bank-info-item"><span class="bank-info-service">apr:</span> apr: 9.8 %</li>
+        <li class="bank-info-item"><span class="bank-info-service">Interest:</span> 2365.36 {{credits.consumer.bgn}} </li>
+        <li class="bank-info-item"><span class="bank-info-service">Monthly amount:</span> 2563 {{monthlyAmount}}</li>
+        <li class="bank-info-item"><span class="bank-info-service">granting fee:</span> 7.6 {{grantingFee}}</li>
+        <li class="bank-info-item"><span class="bank-info-service">maintance fee:</span> 1.9 {{maintanceFee}}</li>
+        <li><button type="button" class="btn btn-success">Send require</button></li>
     </ul>
-
-
 </div>
