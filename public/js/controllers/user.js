@@ -54,7 +54,7 @@ var user = (function () {
                 firebase.database().ref('/users/' + user.uid).once('value').then(function (snapshot) {
                     userData = snapshot.val();
 
-                    var userEmail = firebase.auth().currentUser;
+                    var userEmail = firebase.auth().currentUser.email;
 
                     console.log(userEmail);
 

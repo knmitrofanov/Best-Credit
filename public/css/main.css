@@ -1,7 +1,7 @@
 /*index html ----------------------------------------*/
 
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans"; /* smenigo sys font-family: "Myriad Pro"; */
   /*font-family: 'Roboto Condensed', sans-serif;*/
 }
 
@@ -230,14 +230,16 @@ footer a:hover {
 /*Register=============================================================== Register*/
 
 .register-form {
-  margin: 45px 10%;
-  background-color: #d8d8d8;
+  margin: 45px 20%;
+  background-color: #ececec;
   width: 60%;
+  transition: all 0.7s ease;
 }
 
 @media (max-width: 1200px) {
   .register-form {
-    width: 70%;
+    width: 80%;
+    margin: 45px 10%;
   }
 }
 
@@ -490,6 +492,114 @@ footer a:hover {
   background: #E2534B;
 }
 
+/* Promotion ============================================================= Promotion*/
+
+.promotion-wrapper, section {
+  background-color: #ececec;
+  padding-bottom: 45px;
+}
+
+.promotion {
+ background-color: #f8f8f8;
+ border-radius: 5px;
+ text-align: center;
+ margin: 25px 10px;
+ border-bottom: 3px solid #e5e6e6;
+ transition: all 0.5s ease;
+}
+
+.promotion:hover {
+  transform: scale(1.04) translateY(-5px);
+  background-color: white;
+}
+
+.promotion-title {
+  font-size: 16px;
+  margin: 35px 0;
+  font-family: "Myriad Pro";
+  color: #7f8c8c;
+  text-transform: uppercase;
+}
+
+.btn-promotion {
+  color: white;
+  background-color: #76c7c0;
+  position: relative;
+  bottom: -20px;
+  width: 80%;
+  height: 45px;
+  transition: all 0.5s ease;
+  border-bottom: 3px solid #62b9b0;
+}
+
+.promotion:hover .btn-promotion {
+  background-color: #e8645a;
+  border-color: #e2534b;
+}
+
+/* Banks promotion ======================================================= Bankk promotion*/
+
+.banks-promotion-container {
+  background-color: #e5e6e6;
+  background-image: url("../css/Pictures/Path3.png");
+  background-repeat: no-repeat;
+  padding-top: 45px;
+}
+
+.banks-promotion-title {
+  color: #e1524b;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Myriad Pro";
+  margin-bottom: 45px;
+}
+
+.banks-promotion-item {
+  border: 5px solid #c1c7c8;
+  background-color: #c1c7c8;
+  border-radius: 5px;
+  padding: 0px;
+  margin: 10px;
+  max-width: 452px;
+  transition: all 0.7s ease;
+}
+
+.banks-promotion-item:hover {
+  transform: scale(1.2);
+}
+
+.banks-promotion-item img {
+  border-radius: 5px;
+}
+
+.white-ball {
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.float-ball {
+  background-color: white;
+  width: 15px;
+  height: 7px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 10px 0;
+  float: right;
+}
+
+.title-bar {
+  padding: 0 5px;
+}
+
+/*Banks Info ============================================================= Banks Info */
+
+
+
 
 /*Contacts =============================================================== Contacts*/
 
@@ -734,9 +844,10 @@ footer {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
-.flex-item1 {
+.flex-item-left {
   width: 80%;
 }
 
@@ -857,6 +968,14 @@ h4 {
   position: relative;
   height: 60px;
   background-color: #ececec;
+  padding-left: 10%;
+  color: #7F8C8C;
+}
+
+@media (max-width: 767px) {
+  .progres {
+    padding-left: 10px;
+  }
 }
 
 .progres:after,
