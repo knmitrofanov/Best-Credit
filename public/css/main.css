@@ -504,26 +504,32 @@ section {
   padding-bottom: 45px;
 }
 
-.promotion {
+.promotion-container {
   background-color: #f8f8f8;
   border-radius: 5px;
   text-align: center;
-  margin: 25px 10px;
   border-bottom: 3px solid #e5e6e6;
   transition: all 0.5s ease;
+  margin-bottom: 50px;
+  padding: 0 10px;
 }
 
-.promotion:hover {
+.promotion-container:hover {
   transform: scale(1.04) translateY(-5px);
   background-color: white;
 }
 
+.promotion-logo {
+  margin-top: 50px;
+  color: #76c7c0;
+}
+
 .promotion-title {
   font-size: 16px;
-  margin: 35px 0;
-  font-family: "Myriad Pro";
+  margin: 5px 0 35px;
   color: #7f8c8c;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .btn-promotion {
@@ -537,9 +543,13 @@ section {
   border-bottom: 3px solid #62b9b0;
 }
 
-.promotion:hover .btn-promotion {
+.promotion-container:hover .btn-promotion {
   background-color: #e8645a;
   border-color: #e2534b;
+}
+
+.promotion-container:hover .promotion-logo {
+  color: #e8645a;
 }
 
 
@@ -557,7 +567,6 @@ section {
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Myriad Pro";
   margin-bottom: 45px;
 }
 
@@ -566,9 +575,15 @@ section {
   background-color: #c1c7c8;
   border-radius: 5px;
   padding: 0px;
-  margin: 10px;
-  max-width: 452px;
+  margin-bottom: 35px;
   transition: all 0.7s ease;
+}
+
+
+@media (max-width: 767px) {
+  .banks-promotion-container .container {
+    max-width: 422px;
+  }
 }
 
 .banks-promotion-item:hover {
