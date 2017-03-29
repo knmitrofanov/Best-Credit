@@ -1,13 +1,16 @@
 <div class="bank-info-container">
-    <ul>
-        <img src="../css/Pictures/slider1.jpg" alt="" class="bank-info-title">
-        <li class="bank-info-item"><span class="bank-info-service">Consumer credit:</span> 1523</li>
-        <li class="bank-info-item"><span class="bank-info-service">Period:</span> 36 mounts</li>
-        <li class="bank-info-item"><span class="bank-info-service">apr:</span> apr: 9.8 %</li>
-        <li class="bank-info-item"><span class="bank-info-service">Interest:</span> 2365.36 {{credits.consumer.bgn}} </li>
-        <li class="bank-info-item"><span class="bank-info-service">Monthly amount:</span> 2563 {{monthlyAmount}}</li>
-        <li class="bank-info-item"><span class="bank-info-service">granting fee:</span> 7.6 {{grantingFee}}</li>
-        <li class="bank-info-item"><span class="bank-info-service">maintance fee:</span> 1.9 {{maintanceFee}}</li>
-        <li><button type="button" class="btn btn-success">Send require</button></li>
+
+    <img src="{{img}}" alt="" class="bank-info-title img-fluid">
+    <ul class="bank-info">
+        <li class="bank-info-item"><span class="bank-info-service">Consumer credit</span></li>      
+        <li class="bank-info-item"><span class="bank-info-service">APR:</span> 9.8 %</li>
+        <li class="bank-info-item"><span class="bank-info-service">Interest:</span> {{credits.consumer.bgn}} %</li>       
+        <li class="bank-info-item"><span class="bank-info-service">Granting fee:</span> {{credits.consumer.grantingFee}} %</li>
+        <li class="bank-info-item"><span class="bank-info-service">Maintance fee:</span> {{credits.consumer.maintanceFee}} BGN</li>
+        <li class="bank-info-item"><span class="bank-info-service">Repayment term:</span> 36 mounts</li>
+        <li class="bank-info-item"><span class="bank-info-service">Monthly amount:</span> 256</li>
+        <li class="bank-info-item"><span class="bank-info-service">Total owed amount:</span> 25963</li>
     </ul>
+    <button type="button" class="btn btn-success btn-bank-info">Send require</button>
+
 </div>

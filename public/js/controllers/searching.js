@@ -1,94 +1,87 @@
 let searching = (function () {
 
 
-    function searchingForCredit(context) {
-        let banks,
-            creditType,
-            amount,
-            creditTerm,
-            currency,
-            monthlyAmount,
-            totalAmount,
-            interest,
-            tax;
+    // function searchingForCredit(context) {
 
-        templates.get('home')
-            .then(function (template) {
-                context.$element().html(template());
+    //     const service = "credits";
 
-                $('#btn-search-credit').on('click', function () {
+    //     let banks,
+    //         creditType,
+    //         amount,
+    //         creditTerm,
+    //         currency,
+    //         monthlyAmount,
+    //         totalAmount,
+    //         interest,
+    //         tax;
 
-                    data.getBanksInfo().then(snapshot => {
-                        banks = snapshot.val();
-                        creditType = $('#credit-type').val();
-                        amount = $('#credit-amount').val();
-                        creditTerm = $('#creditTerm').val();
-                        currency = $('#credit-currency').val();
-
-                        // Object.keys(banks).forEach(x => {
-                        //     console.log(x);
-                        //     console.log(x.hasOwnProperty("credits"));
-                        // })
-
-                        const service = "credits";
-                        var b = "housing";
-                        var c = "bgn";
-
-                        switch (creditType) {
-                            case 'Потребителски кредити':
-                                creditType = 'consumer';
-                                break;
-                            case 'Ипотечен кредит':
-                                creditType = 'mortgage';
-                                break;
-                            case 'Жилищен кредит':
-                                creditType = 'housing';
-                                break;
-                            default:
-                                creditType
-                                break;
-                        }
-
-                        if (creditType === 'Моля изберете') {
-                            toastr.error('Моля въведете желания от Вас вид кредит');
-                            $('#credit-type').addClass('red-frame');
-                            return;
-                        }
-
-                        // context.redirect('#/result')
-
-                        var ne6to = context.path;
-                        console.log(ne6to);
-                        console.log(banks);
+    //         let searchingInfo = {};
 
 
+    //     data.getBanksInfo().then(snapshot => {
+    //         banks = snapshot.val();
+    //         creditType = $('#credit-type').val();
+    //         amount = $('#credit-amount').val();
+    //         creditTerm = $('#creditTerm').val();
+    //         currency = $('#credit-currency').val();
 
-                        console.log(creditType);
-                        console.log(currency);
-                        for (let key in banks) {
-                            console.log(banks[key][service][creditType][currency.toLowerCase()]);
-                            interest = amount * (banks[key][service][creditType][currency.toLowerCase()] / 100);
-                            totalAmount = amount * 1 + interest;
-                            monthlyAmount = totalAmount / creditTerm;
-                            // tax = amount *  dopi6i za taksata
+    //         searchingInfo["creditType"] = creditType;
+    //         searchingInfo["amount"] = amount;
+    //         searchingInfo["creditTerm"] = creditTerm;
+    //         searchingInfo["currency"] = currency;
 
-                            banks[key]['totalAmount'] = totalAmount.toFixed(2);
-                            banks[key]['interest'] = interest;
-                            banks[key]['monthlyAmount'] = monthlyAmount.toFixed(2);
-                            console.log(banks[key]);
+    //         // Object.keys(banks).forEach(x => {
+    //         //     console.log(x);
+    //         //     console.log(x.hasOwnProperty("credits"));
+    //         // })
+
+    //         switch (creditType) {
+    //             case 'Consumer credit':
+    //                 creditType = 'consumer';
+    //                 break;
+    //             case 'Mortgage credit':
+    //                 creditType = 'mortgage';
+    //                 break;
+    //             case 'Housing credit':
+    //                 creditType = 'housing';
+    //                 break;
+    //             default:
+    //                 creditType
+    //                 break;
+    //         }
+
+    //         if (creditType === 'Please choose') {
+    //             toastr.error('Please choose type of credit');
+    //             $('#credit-type').addClass('red-frame');
+    //             return;
+    //         }
+
+    //         // context.redirect('#/result')
+
+    //         var ne6to = context.path;
+
+    //         for (let key in banks) {
+    //             console.log(banks[key][service][creditType][currency.toLowerCase()]);
+    //             interest = amount * (banks[key][service][creditType][currency.toLowerCase()] / 100);
+    //             totalAmount = amount * 1 + interest;
+    //             monthlyAmount = totalAmount / creditTerm;
+    //             // tax = amount *  dopi6i za taksata
+
+    //             banks[key]['totalAmount'] = totalAmount.toFixed(2);
+    //             banks[key]['interest'] = interest;
+    //             banks[key]['monthlyAmount'] = monthlyAmount.toFixed(2);
+    //             banks[key]["searchingInfo"] = searchingInfo;
+    //             console.log(banks);
+
+    //         }
 
 
-                        }
-
-
-                        return templates.get('searching-credit').then(template => {
-                            context.$element().html(template(banks))
-                            $(document).scrollTop(0);
-                        })
-                    })
-                })
-            });
-    }
+    //         return templates.get('searching-credit').then(template => {
+    //             context.$element().html(template(banks))
+    //             $(document).scrollTop(0);
+    //         })
+    //     })
+    // }
 
 
     function searchingForCredit(context) {

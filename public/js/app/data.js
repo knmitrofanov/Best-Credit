@@ -2,14 +2,6 @@ var data = (function () {
 
   function register(user) {
     return firebase.auth().createUserWithEmailAndPassword(user.email, user.password);
-
-    // .catch(function (error) {
-    //   // Handle Errors here.
-    //   var errorCode = error.code;
-    //   var errorMessage = error.message;
-    //   console.log(errorCode);
-    //   console.log(errorMessage);
-    // });
   }
 
   function writeUserData(userData, userId) {

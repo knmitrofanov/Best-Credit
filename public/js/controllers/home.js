@@ -53,13 +53,13 @@ let home = (function () {
                         var c = "bgn";
 
                         switch (creditType) {
-                            case 'Потребителски кредити':
+                            case 'Consumer credit':
                                 creditType = 'consumer';
                                 break;
-                            case 'Ипотечен кредит':
+                            case 'Mortgage credit':
                                 creditType = 'mortgage';
                                 break;
-                            case 'Жилищен кредит':
+                            case 'Housing credit':
                                 creditType = 'housing';
                                 break;
                             default:
@@ -67,8 +67,8 @@ let home = (function () {
                                 break;
                         }
 
-                        if (creditType === 'Моля изберете') {
-                            toastr.error('Моля въведете желания от Вас вид кредит');
+                        if (creditType === 'Please choose') {
+                            toastr.error('Please choose type of credit');
                             $('#credit-type').addClass('red-frame');
                             return;
                         }

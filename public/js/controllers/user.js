@@ -8,8 +8,6 @@ var user = (function () {
                 context.$element().html(template());
 
 
-
-
                 $(".btn-register").on("click", function () {
                     let user = {
                         email: $("#register-email").val(),

@@ -9,11 +9,8 @@
         this.get('#/result', searching.searchingForCredit);
         this.get('#/contacts', contacts.showInfo);
         this.get('#/register', user.register);
-        this.get('#/user', user.userInfo);  // opraviiii go da e kakto trqbva sus :id !!!!!
-        this.get("#/bank-details", bank.getBankDetails); // opraviiii go da e kakto trqbva sus :id !!!!!
-
-        this.get('#/test', test.test);
-
+        this.get('#/user', user.userInfo);
+        this.get("#/home/:id", bank.getBankDetails); // opraviiii go da e kakto trqbva sus :id !!!!!
     });
 
     $(function () {
@@ -57,7 +54,7 @@
 
             data.users.login(user)
                 .then(function (user) {
-                    toastr.success("Succsefol log in");
+                    toastr.success("Successful log in");
                     $('#loginModal').modal('hide');
                     document.location = '#/home';
 
@@ -86,7 +83,7 @@
         $('#btn-logout').on("click", function () {
             firebase.auth().signOut()
                 .then(function () {
-                    toastr.success("Succsefol log out");
+                    toastr.success("Successful log out");
                     document.location = '#/home';
 
                     setTimeout(function () {
