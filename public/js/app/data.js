@@ -13,12 +13,6 @@ var data = (function () {
   }
 
   function writeUserData(userData, userId) {
-
-    let error = validator.validateEmptyData(userData);
-
-    if (error) {
-      return Promise.reject(error);
-    }
     
     firebase.database().ref('users/' + userId).set({
       name: userData.name,

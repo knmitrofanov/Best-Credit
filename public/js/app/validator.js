@@ -31,19 +31,8 @@ var validator = (function () {
     }
   }
 
-  function validateEmptyData(data) {
-    if (data.array.forEach(function(element) {
-      element.length === 0
-    }, this)) {
-      return {
-        message: "All field are required"
-      };
-    }
-  }
-
   return {
     validateString,
-    validateUrl,
-    validateEmptyData
+    validateUrl
   };
 }());

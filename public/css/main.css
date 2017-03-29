@@ -330,6 +330,7 @@ footer a:hover {
   .searching-menu {
     margin-right: 0px;
     margin-left: 0px;
+    top: -20px;
   }
 }
 
@@ -578,7 +579,6 @@ section {
   margin-bottom: 35px;
   transition: all 0.7s ease;
 }
-
 
 @media (max-width: 767px) {
   .banks-promotion-container .container {
@@ -891,6 +891,12 @@ footer {
   padding-left: 8%;
 }
 
+@media (max-width: 767px) {
+  .footer-botom {
+    padding-left: 10px;
+  }
+}
+
 .footer-botom a {
   color: white;
   margin-left: 10px;
@@ -903,6 +909,12 @@ footer {
 
 .flex-item-left {
   width: 80%;
+}
+
+@media (max-width: 767px) {
+  .flex-item-left {
+    width: 60%;
+  }
 }
 
 .main-footer h4 {

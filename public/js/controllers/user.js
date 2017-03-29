@@ -7,6 +7,9 @@ var user = (function () {
             .then(function (template) {
                 context.$element().html(template());
 
+
+
+
                 $(".btn-register").on("click", function () {
                     let user = {
                         email: $("#register-email").val(),
@@ -20,6 +23,18 @@ var user = (function () {
                         phone: $("#register-phone").val(),
                         city: $("#register-city").val(),
                         address: $("#register-address").val()
+                    }
+
+                    if ($(".register-form .form-control").val() === "") {
+                        toastr.error('All field are required');
+                        $('.register-form .form-control').each(function () {
+                            if ($(this).val() === "") {
+                                $(this).addClass("red-frame");
+                            } else {
+                                $(this).removeClass("red-frame");
+                            }
+                        });
+                        return;
                     }
 
                     data.register(user)
@@ -54,7 +69,7 @@ var user = (function () {
                 firebase.database().ref('/users/' + user.uid).once('value').then(function (snapshot) {
                     userData = snapshot.val();
 
-                    var userEmail = firebase.auth().currentUser.email;
+                    let userEmail = firebase.auth().currentUser.email;
 
                     console.log(userEmail);
 
